@@ -1,47 +1,66 @@
-* {
+body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     padding: 30px;
     margin: 15px;
+    word-wrap: normal;
+    resize: vertical;
+    /* column-rule-style: double;
+    text-shadow: grey;
+    text-decoration-style: solid;
+    text-decoration-color: indigo; */
+    transition-timing-function: ease-in;
+    transition-duration: 1000ms;
+    /* user-zoom: unset; */
+    /* align-content: center; used for FLEX*/
+    align-self: auto;
+    align-content: center;
+
   }
 
  
 
 /* Fints needs to be down loaded*/
-@font-face {
+/* @font-face {
     font-family: 'Cherry Monospace-Light';
     src: url( '../fonts/cherry-monospace/Cherry\ Monospace-Light.ttf' );
     src:
       url( '../fonts/cherry-monospace/Cherry\ Monospace-Light.ttf' )
       format( 'truetype' );
-    font-weight: normal; /* Thickness: how bold or light is it? */
-    font-style: normal; /* Is it italic? */
-  }
+    font-weight: normal; 
+    font-style: normal; 
+  } */
 
 /* Profile picture */
-.avatar {
+img.avatar {
     vertical-align: middle;
-    width: 170px;
-    height: 200px;
+    width: 80px;
+    height: 100px;
     border-radius: 50%;
+    flex-shrink: 0;
   }
 
-/*   nav {
-    position: absolute;
+
+  /* Flex Container settings (to change direction = flex-direction: column; */
+  .navi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+  /* nav a.links{
+   
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateX(-50%);
-}
-
-nav {
-    display: flex;
-    
 } */
- 
-  /*
+
   nav a:hover {
     color: #0000dd; 
-  }
+  } 
+  
+  /*
   .nav > li { display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -91,11 +110,12 @@ nav {
 body
 {
 display: grid;
-grid-template-columns: 15% 75%;
+grid-template-columns: 25% 75%;
 grid-template-rows: auto;
 
 grid-template-areas: 
-"avatar nav"
+
+"nav nav"
 "yt yt"
 "git git"
 "ard ard"
@@ -104,8 +124,8 @@ grid-template-areas:
 "tech tech"
 "work work"
 "edu edu"
-"social social"
-"foot foot";
+"foot social"
+;
 }
 
 /* #navbar {
