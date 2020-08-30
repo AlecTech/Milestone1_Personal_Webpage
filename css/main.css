@@ -5,6 +5,8 @@
     margin: 15px;
   }
 
+ 
+
 /* Fints needs to be down loaded*/
 @font-face {
     font-family: 'Cherry Monospace-Light';
@@ -24,17 +26,18 @@
     border-radius: 50%;
   }
 
-  nav {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateX(-50%);
-  }
+/*   nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateX(-50%);
+}
 
-  nav > a {
-      display: flex;
-      orientation: landscape;
-  }
+nav {
+    display: flex;
+    
+} */
+ 
   /*
   nav a:hover {
     color: #0000dd; 
@@ -57,6 +60,8 @@
 
 
   /*Grid for testing*/
+.avatar {background-color: green;}
+.navi {background-color: rgb(81, 223, 81);}
 .yt { background-color: lightsalmon; }
 .git { background-color: lightslategray; }
 .ard { background-color: darkgoldenrod; }
@@ -70,8 +75,8 @@
 
 
 
-#avatar { grid-area: avatar; }
-nav { grid-area: nav; }
+.avatar { grid-area: avatar; }
+.navi { grid-area: nav; }
 .yt { grid-area: yt; }
 .git { grid-area: git; }
 .ard { grid-area: ard; }
@@ -102,4 +107,49 @@ grid-template-areas:
 "social social"
 "foot foot";
 }
+
+/* #navbar {
+    display: flex;
+    min-height: 100px;
+    grid-auto-flow: column;
+    background-color: #fcfcfc;
+    grid-gap: 1.5em;
+    padding: 0 40px;
+    -webkit-box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
+    -moz-box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
+    box-shadow: -1px 4px 5px 0px rgba(209, 205, 209, 1);
+  }
+  
+  #logo {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+  }
+  
+  .logo span {
+    color: #0474bc;
+  }
+  
+  #links {
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    grid-auto-flow: column;
+    grid-gap: 1.5em;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a:hover {
+    color: #0474bc;
+  } */
 
