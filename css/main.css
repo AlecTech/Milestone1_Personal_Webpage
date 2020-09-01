@@ -1,7 +1,7 @@
 *{
-    border: .1px solid #ff0000;
-    margin: 0.6em;
-    padding: 0.6em;
+    outline: .1px solid #ff0000 !important;
+    /* margin: 0.6em;
+    padding: 0.6em; */
 
 }
 /* Fonts needs to be down loaded*/
@@ -32,7 +32,8 @@
   h1 {
       font-family: 'netherland_cracker', 'Courier New', 'Courier', 'monospace';
       font-weight: 200;    
-      
+      line-height: 2.5rem;
+      margin-bottom: -1rem;
     }
     h2{
         font-family: 'Rubik','Courier New', 'Courier', 'monospace';
@@ -54,10 +55,11 @@ body {
 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    padding: 15px;
+    /* padding: 15px; */
     margin: 15px;
     word-wrap: normal;
     resize: vertical;
+
     transition-timing-function: ease-in;
     transition-duration: 1000ms;
     align-self: auto;
@@ -65,9 +67,10 @@ body {
 
     /* Grid setup */
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 35% 60%;
     grid-template-rows: auto;
-    /* grid-gap: 20px; */
+    row-gap: 20px;
+    column-gap: 5%;
 
     grid-template-areas: 
 
@@ -106,9 +109,18 @@ body {
     flex-direction: column;
     align-items: center;
     /* align-content: center; */
-    /* justify-content: center; */
+    justify-content: center;
     /* justify-items: center; */
+    height: 70vh;
+}
 
+iframe{
+  /* position: absolute; */
+  top:0;
+  left: 0;
+  width: 85%;
+  /* height: 85%; */
+  margin-top: 10vh;
 }
 .git { grid-area: git; 
     display: flex;
@@ -120,9 +132,16 @@ body {
     /* align-content: center; */
     /* contain: content; */
 }
-.gitImg {
+.git a{
   /* background-image: url("../img/Octocat.png"); */
   width: 50%;
+  /* width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; */
+  margin: 10px;
+}
+.git img{
+  width: 100%;
 }
 
 .ard { grid-area: ard; 
@@ -160,21 +179,34 @@ body {
 
   /* column-count: 2; */
 }
-.cert { grid-area: cert; 
-display: flex;
-flex-wrap: wrap;
-contain: content;
-justify-content: space-around;
-
+.cert { 
+  grid-area: cert; 
 }
 
-section ul.certImg{
+.cert h1{
+  margin: 0 auto;
+  width: fit-content;
+}
+/* section ul.certImg{
   size: 100px;
   padding: 0;
   image-rendering: pixelated;
   width: 50%;
-  
-  
+} */
+
+#certList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  contain: content;
+  justify-content: space-between;
+  /* height: auto; */
+}
+
+#certList img{
+  width: 47.5%;
+  margin-bottom: 2.5%;
+  image-rendering: pixelated;
 }
 
 /* setting up Tech grid inside Body grid */
@@ -216,7 +248,7 @@ section ul.certImg{
   padding: 5px;
   cursor: pointer;
   text-decoration: none;
-  width: 100px;
+  width: 70%;
   text-align: center;
   border-radius: 5px;
   font-size: 10px;
@@ -228,19 +260,7 @@ footer a:hover{
 
 /* Containter for the youtube box 
 CSS to make it responsive*/
-.ytBox {
-    position: relative;
-    width: 70%;
-    padding-bottom: 50%; 
-    height: 0;
-  }
-  .ytBox iframe{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 85%;
-    height: 85%;
-  }
+
 
 
 
@@ -253,8 +273,8 @@ CSS to make it responsive*/
 
 #techH1 {
     grid-area: techH1;
-    margin: 0;
-    padding: 0;
+    margin: 5%;
+    padding: 5%;
     align-items: center;
     display: flex;
     font-size: 16px;
@@ -269,7 +289,7 @@ CSS to make it responsive*/
     align-items: center;
     display: flex;
     /* justify-content: center; */
-    width: inherit;    
+    /* width: inherit;     */
 }
 #p2 {
     grid-area: p2;
@@ -277,7 +297,7 @@ CSS to make it responsive*/
     padding: 0;
     align-items: center;
     display: flex;
-    width: inherit;
+    /* width: inherit; */
 }
 #p3 {
     grid-area: p3;
@@ -285,7 +305,7 @@ CSS to make it responsive*/
     padding: 0;
     align-items: center;
     display: flex;
-    width: inherit;
+    /* width: inherit; */
 }
 #p4 {
     grid-area: p4;
@@ -293,7 +313,7 @@ CSS to make it responsive*/
     padding: 0;
     align-items: center;
     display: flex;
-    width: inherit;
+    /* width: inherit; */
 }
 #p5 {
     grid-area: p5;
@@ -301,7 +321,7 @@ CSS to make it responsive*/
     padding: 0;
     align-items: center;
     display: flex;
-    width: inherit;
+    /* width: inherit; */
 }
 #p6 {
     grid-area: p6;
@@ -309,7 +329,7 @@ CSS to make it responsive*/
     padding: 0;
     align-items: center;
     display: flex;
-    width: inherit;
+    /* width: inherit; */
 }
 #p7 {
     grid-area: p7;
@@ -317,7 +337,7 @@ CSS to make it responsive*/
     padding: 0;
     align-items: center;
     display: flex;
-    width: inherit;
+    /* width: inherit; */
 }
 #p8 {
     grid-area: p8;
@@ -325,7 +345,7 @@ CSS to make it responsive*/
     padding: 0;
     align-items: center;
     display: flex;
-    width: inherit;
+    /* width: inherit; */
 }
 
 

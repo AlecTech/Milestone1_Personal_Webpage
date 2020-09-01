@@ -6,13 +6,13 @@
     <script src="js/scripts.js" defer></script>
     <title>Oleg Eremeev CV</title>
       <!-- Style(s) -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css" >
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" >
 </head>
 <body>
  
-    
    
     <nav class="navi"> <!-- Flex box Container-->
         <img id="avatar" style="opacity: 0" src="img/avatar1.png" alt="Avatar" type="img">
@@ -24,17 +24,18 @@
 
     <section class="yt">
         <h1>My Youtube Channel</h1>
-        <div class="ytBox">
+         
             <iframe width="560" height="315" src="https://www.youtube.com/embed/OAIO1B71D4Q" 
             frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen></iframe>
-        </div>
+        
     </section>
 
     <section class="git">
         <h1>My Github  </h1>
         <!-- <img class="gitImg" src="img/Octocat.png"> -->
-        <a href="https://github.com/AlecTech?tab=repositories"><img class="gitImg" src="img/Octocat.png"  alt="GitHub Link"> 
+        <a href="https://github.com/AlecTech?tab=repositories">
+            <img class="gitImg" src="img/Octocat.png"  alt="GitHub Link"> 
         </a>
        
     </section>
@@ -61,7 +62,7 @@
 
     <section class="cert">
         <h1> Certificates </h1>
-        <ul class="certImg">
+        <ul id="certList">
             <img src="img/arduino1.png">
             <img src="img/arduino2.png">
             <img src="img/arduino3.png">
