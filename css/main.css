@@ -84,7 +84,7 @@ body {
   }
 
     /*Grid for testing*/
-.avatar {background-color: green;}
+#avatar {background-color: green;}
 .navi {background-color: rgb(81, 223, 81);}
 .yt { background-color: lightsalmon; }
 .git { background-color: lightslategray; }
@@ -99,7 +99,7 @@ body {
 
 /* Grid naming section and properies */
 
-.avatar { grid-area: avatar; }
+#avatar { grid-area: avatar; }
 .navi { grid-area: nav; }
 .yt { grid-area: yt;
     display: flex;
@@ -304,12 +304,13 @@ font-size: 16px;
 
 
 /* Profile picture */
-img.avatar {
+img#avatar {
     vertical-align: middle;
-    width: 80px;
-    height: 100px;
+    width: 100px;
+    height: 130px;
     border-radius: 50%;
     flex-shrink: 0;
+    padding: 0;
   }
 
 
