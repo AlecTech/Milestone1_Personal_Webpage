@@ -120,6 +120,10 @@ body {
     /* align-content: center; */
     /* contain: content; */
 }
+.gitImg {
+  /* background-image: url("../img/Octocat.png"); */
+  width: 50%;
+}
 
 .ard { grid-area: ard; 
     display: flex;
@@ -130,8 +134,48 @@ body {
     /* align-content: center; */
     contain: content;
 }
-.skill { grid-area: skill; }
-.cert { grid-area: cert; }
+
+
+.ardImg{
+  width: 50%;
+}
+.skill{ 
+  grid-area: skill; 
+  /* display: flex; */
+  
+  
+  /* flex-basis: auto; */
+  /* column-count: 2; */
+  /* align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center; */
+
+}
+.skill ul{
+  display: flex;
+  flex-direction: row;
+   flex-wrap: wrap;
+
+
+  /* column-count: 2; */
+}
+.cert { grid-area: cert; 
+display: flex;
+flex-wrap: wrap;
+contain: content;
+justify-content: space-around;
+
+}
+
+section ul.certImg{
+  size: 100px;
+  padding: 0;
+  image-rendering: pixelated;
+  width: 50%;
+  
+  
+}
 
 /* setting up Tech grid inside Body grid */
 .tech 
@@ -198,14 +242,8 @@ CSS to make it responsive*/
     height: 85%;
   }
 
-  .gitImg {
-      /* background-image: url("../img/Octocat.png"); */
-      width: 50%;
-  }
 
-  .tinkerImg{
-      width: 50%;
-  }
+
 
   /* .ard img {
       display: block;
