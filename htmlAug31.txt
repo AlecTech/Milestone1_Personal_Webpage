@@ -34,8 +34,7 @@
     <section class="git">
         <h1>My Github  </h1>
         <!-- <img class="gitImg" src="img/Octocat.png"> -->
-        <a href="https://github.com/AlecTech?tab=repositories"><img class="gitImg" src="img/Octocat.png"  alt="GitHub Link"> 
-        </a>
+        <a href="https://github.com/AlecTech?tab=repositories"><img class="gitImg" src="img/Octocat.png"  alt="GitHub Link"> </a>
        
     </section>
 
@@ -165,8 +164,7 @@
 
     <footer  class ="foot">
         <p>&copy; Oleg Eremeev </p>
-        <a href="./CV/OlegEremeevCV2020.pdf" class="downloadBtn" download> Download CV </a>
-        <!-- <button src="./CV/OlegEremeev.pdf" id="downloadBtn"><i class="fa fa-download"></i>Download CV</button> -->
+        <button href="../CV/ " id="downloadBtn"><i class="fa fa-download"></i>Download CV</button>
     </footer>
 
 </body>

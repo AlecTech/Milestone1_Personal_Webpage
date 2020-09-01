@@ -6,6 +6,10 @@ https://trello.com/b/NijLz51y/milestone-1-resume-with-contact-form
 2) pen draw pic https://unsplash.com/s/photos/pen-and-paper
 3) 
 
+# Fonts
+1) Rubik https://fonts.google.com/specimen/Rubik?preview.text=DEGREE:+Diploma+in+Electronics+and+Laser+Technology&preview.text_type=custom&sort=date&vfonly=true&preview.size=20&sidebar.open=true&selection.family=Rubik
+2) arpeggo and netherland cracker honts are from https://www.creativefabrica.com/designer/haksen/ref/144208/
+
 # Nav (css)
   /* Navigation Css Starts*/
 

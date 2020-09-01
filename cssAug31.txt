@@ -113,14 +113,12 @@ body {
 .git { grid-area: git; 
     display: flex;
     flex-direction: column;
-    /* padding: 0; */
     /* flex-wrap: wrap; */
     /* justify-content: space-around; */
     align-items: center;
     /* align-content: center; */
-    /* contain: content; */
+    contain: content;
 }
-
 .ard { grid-area: ard; 
     display: flex;
     flex-direction: column;
@@ -154,33 +152,11 @@ body {
 .work { grid-area: work; }
 .edu { grid-area: edu; }
 .social { grid-area: social; }
-.foot { 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height: 100vh; */
-  flex-direction: column;
-  font-family: sans-serif;
-
-  grid-area: foot; 
+.foot 
+{ grid-area: foot; 
   font-size: 12px;
   padding: 0;
 }
-.downloadBtn{
-  display: block;
-  background: #fff;
-  padding: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  width: 100px;
-  text-align: center;
-  border-radius: 5px;
-  font-size: 10px;
-}
-footer a:hover{
-  background: #00729D;
-}
-
 
 /* Containter for the youtube box 
 CSS to make it responsive*/
@@ -392,3 +368,7 @@ img.avatar {
     color: #0474bc;
   } */
 
+#downloadBtn{
+    background-color: rgb(80, 83, 233);
+    padding: 5px;
+}
