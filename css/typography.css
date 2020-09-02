@@ -1,0 +1,54 @@
+/* This file is for type, and whitespace around letters */
+
+
+/* Fonts needs to be down loaded*/
+@font-face {
+    font-family: 'Rubik';
+    src: url( '../fonts/Rubik/Rubik-VariableFont_wght.ttf' );
+    src: url( '../fonts/Rubik/Rubik-VariableFont_wght.ttf' ) format( 'truetype' );
+    font-weight: normal; 
+    font-style: normal; 
+}
+  
+@font-face {
+    font-family: 'netherland_cracker';
+    src: url( '../fonts/netherland_cracker/NetherlandCrackerPersonalUse.ttf' );
+    src: url( '../fonts/netherland_cracker/NetherlandCrackerPersonalUse.ttf' ) format( 'truetype' );
+    font-weight: normal; 
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'netherland_cracker', 'Courier New', 'Courier', 'monospace';
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: -1rem;
+}
+
+h2{
+    font-family: 'Rubik','Courier New', 'Courier', 'monospace';
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-top: 1.2rem;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 15px;
+}
+
+nav a:hover {
+    /* TODO: Go to color.adobe.com and pick better colours that match your bg photo */
+    color: #0000dd; 
+} 
+
+.foot { 
+    font-size: 12px;
+}
+
+.downloadBtn {
+    text-decoration: none;
+    text-align: center;
+    font-size: 10px;
+}

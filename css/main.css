@@ -1,92 +1,41 @@
 *{ outline: .1px solid #ff0000 !important; }
-
-/* Fonts needs to be down loaded*/
-@font-face {
-    font-family: 'Rubik';
-    src: url( '../fonts/Rubik/Rubik-VariableFont_wght.ttf' );
-    src: url( '../fonts/Rubik/Rubik-VariableFont_wght.ttf' ) format( 'truetype' );
-    font-weight: normal; 
-    font-style: normal; 
-  }
-
-  @font-face {
-    font-family: 'netherland_cracker';
-    src: url( '../fonts/netherland_cracker/NetherlandCrackerPersonalUse.ttf' );
-    src: url( '../fonts/netherland_cracker/NetherlandCrackerPersonalUse.ttf' ) format( 'truetype' );
-    font-weight: normal; 
-    font-style: normal; 
-  }
-
-  h1 {
-      font-family: 'netherland_cracker', 'Courier New', 'Courier', 'monospace';
-      line-height: 2.5rem;
-      letter-spacing: 0.1rem;
-      margin-bottom: -1rem;
-    }
-    h2{
-        font-family: 'Rubik','Courier New', 'Courier', 'monospace';
-        font-size: 1.2rem;
-        line-height: 1.6rem;
-        margin-top: 1.2rem;
-    }
-
     /* Body major attributes */
 body {
-    background-image: url("../img/milkyway1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    
+  background-image: url("../img/milkyway1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+  /* TODO: THIS EFFECT IS NOT WORKING */
+  /* transition-timing-function: ease-in;
+  transition-duration: 1000ms;
+  align-self: auto;
+  align-content: center; */
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    /* padding: 15px; */
-    margin: 15px;
-    word-wrap: normal;
-    resize: vertical;
-
-    transition-timing-function: ease-in;
-    transition-duration: 1000ms;
-    align-self: auto;
-    align-content: center;
-
-    /* Grid setup */
-    display: grid;
-    grid-template-columns: 35% 60%;
-    grid-template-rows: auto;
-    row-gap: 20px;
-    column-gap: 5%;
-
-    grid-template-areas: 
-
-    "nav nav"
-    "yt yt"
-    "git git"
-    "ard ard"
-    "skill skill"
-    "cert cert"
-    "tech tech"
-    "work work"
-    "edu edu"
-    "foot social";
-  }
+  /* Grid setup */
+  display: grid;
+  grid-template-columns: 35% 60%;
+  row-gap: 20px;
+  column-gap: 5%;
+  grid-template-areas: 
+  "nav nav"
+  "yt yt"
+  "git git"
+  "ard ard"
+  "skill skill"
+  "cert cert"
+  "tech tech"
+  "work work"
+  "edu edu"
+  "foot social";
+}
 
     /*Grid for testing*/
-#avatar {background-color:  rgba(255, 255, 255, 0.25);}
-.navi {background-color: rgba(255, 255, 255, 0.25);}
-.yt { background-color: rgba(255, 255, 255, 0.25); }
-.git { background-color: rgba(255, 255, 255, 0.25); }
-.ard { background-color: rgba(255, 255, 255, 0.25); }
-.skill { background-color: rgba(255, 255, 255, 0.25);}
-.cert { background-color: rgba(255, 255, 255, 0.25); }
-.tech { background-color: rgba(255, 255, 255, 0.25);}
-.work { background-color: rgba(255, 255, 255, 0.25); }
-.edu { background-color: rgba(255, 255, 255, 0.25); }
-.social{ background-color: rgba(255, 255, 255, 0.25);}
-.foot{ background-color: rgba(255, 255, 255, 0.25);}
 
-/* Grid naming section and properies  {grid-area: avatar;} */
+nav, section, footer{
+  background-color: rgba(255, 255, 255, 0.25);
+}
 
 #avatar { 
   grid-area: avatar; 
@@ -99,100 +48,75 @@ img#avatar {
   height: 130px;
   border-radius: 50%;
   flex-shrink: 0;
-  padding: 0;
   margin-top: 5%;
 }
 
-/* nav a.links{
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateX(-50%);
-} */
+.skill ul, #certList{
+  display: flex;
+}
+
+.navi, .yt, .git, .ard, .skill, .foot{
+  display: flex;
+  align-items: center;
+}
 
 .navi { 
   grid-area: nav; 
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
 }
-
-
-/* Flex Container settings (to change direction = flex-direction: column; */
-.navi {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-}
-
-nav a:hover {
-  color: #0000dd; 
-} 
 
 /* Containter for the youtube box 
 CSS to make it responsive*/
 .yt { 
-    grid-area: yt;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 70vh;
+  grid-area: yt;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vh;
 }
 .yt h1 {
   margin-top: 5%;
 }
 
 iframe{
-    top:0;
-    left: 0;
-    width: 85%;
-    height: 85%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+  width: 85%;
+  height: 85%;
+  margin: 5% auto 5% auto;
 }
+
 .git { 
-    grid-area: git; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  grid-area: git;
+  flex-direction: column;
 }
 .git a{
-    width: 50%;
-    margin: 10px;
+  width: 50%;
+  margin: 5%;
 }
-.git img{
-    width: 100%;
-}
-
-.ard { 
-    grid-area: ard; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    contain: content;
-}
-
-.ard a{
-    width: 50%;
-    margin: 10px;
-}
-
-.ard img{
+.git img, .ard img{
   width: 100%;
 }
 
-.skill{ 
-  grid-area: skill; 
-  display: flex;
+.ard { 
+  grid-area: ard;
   flex-direction: column;
-  align-items: center;
+  contain: content;
+}
+
+.ard a{
+  width: 50%;
+  margin: 5%;
+}
+
+.skill{ 
+  grid-area: skill;
+  flex-direction: column;
   contain: content;
 }
 
 .skill ul{
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   justify-content: space-between;
   padding: 10px;
 }
@@ -211,7 +135,6 @@ iframe{
 
 #certList {
   width: 100%;
-  display: flex;
   flex-wrap: wrap;
   contain: content;
   justify-content: space-around;
@@ -224,14 +147,11 @@ iframe{
 }
 
 /* setting up Tech grid inside Body grid */
-.tech 
-{ grid-area: tech; 
+.tech{ 
+  grid-area: tech; 
   display: grid;
-  /* grid-template-columns: 50% 50%; */
-  /* grid-template-rows: 20% 20% 20% 20% 20%; */
   grid-gap: 0.1rem;
   grid-template-areas: 
-
   "techH1 techH1"
   "p1 p2"
   "p3 p4"
@@ -242,15 +162,13 @@ iframe{
 .tech h1{
   margin: 0 auto;
   width: fit-content;
-  
 }
 
 .tech #p1{
+  /* position and list-style required for animated progress bar */
   position: relative;
   list-style: none;
   margin: 50px 0;
-  font-weight: 500;
-  text-transform: uppercase;
 }
 
 .tech #p1:before{
@@ -288,86 +206,41 @@ iframe{
   }
 }
 
-/* #techH1 {
-  grid-area: techH1;
-  margin: 5%;
-  padding: 5%;
-  display: flex;
-  font-size: 16px;
-  max-width: 98%;
-  justify-content: center;
-} */
-
 #p1 {
   grid-area: p1;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  display: flex;
 }
 #p2 {
   grid-area: p2;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  display: flex;
 }
 #p3 {
   grid-area: p3;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  display: flex;
 }
 #p4 {
   grid-area: p4;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  display: flex;
 }
 #p5 {
   grid-area: p5;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  display: flex;
 }
 #p6 {
   grid-area: p6;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  display: flex;
 }
 #p7 {
   grid-area: p7;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  display: flex;
 }
 #p8 {
   grid-area: p8;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  display: flex;
 }
 
 .work { 
   grid-area: work; 
   padding: 5%;
 }
-.work ul li{
+.work ul li, .edu ul li{
   margin-top: 5%;
 }
 .edu { 
   grid-area: edu; 
   padding: 5%;
-}
-.edu ul li{
-  margin-top: 5%;
 }
 
 .social { 
@@ -375,32 +248,23 @@ iframe{
 }
 
 .social a{
-
-  padding: 10px;
-  margin: 10px;
+  padding: 5%;
+  margin: 5%;
 }
 
 .foot { 
-  display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   font-family: sans-serif;
-  grid-area: foot; 
-  font-size: 12px;
-  padding: 0;
+  grid-area: foot;
 }
-.downloadBtn{
+.downloadBtn {
   display: block;
   background: #fff;
   padding: 5px;
   margin-top: 5%;
-  cursor: pointer;
-  text-decoration: none;
   width: 70%;
-  text-align: center;
   border-radius: 5px;
-  font-size: 10px;
 }
 
 footer a:hover{
