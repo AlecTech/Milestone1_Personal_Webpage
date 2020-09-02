@@ -7,11 +7,11 @@ body {
   background-attachment: fixed;
   background-position: center;
   
-  /* TODO: THIS EFFECT IS NOT WORKING */
-  /* transition-timing-function: ease-in;
-  transition-duration: 1000ms;
+  /* Ease In effect seems like page is decending*/
+  transition-timing-function: ease-in;
+  transition-duration: 2000ms;
   align-self: auto;
-  align-content: center; */
+  align-content: center;
 
   /* Grid setup */
   display: grid;
@@ -36,6 +36,10 @@ body {
 nav, section, footer{
   background-color: rgba(255, 255, 255, 0.25);
 }
+.navi a:hover {
+  color: #ddddee; 
+} 
+
 
 #avatar { 
   grid-area: avatar; 
@@ -48,7 +52,7 @@ img#avatar {
   height: 130px;
   border-radius: 50%;
   flex-shrink: 0;
-  margin-top: 5%;
+  margin: 1rem 1rem 1rem 0;
 }
 
 .skill ul, #certList{
@@ -58,6 +62,7 @@ img#avatar {
 .navi, .yt, .git, .ard, .skill, .foot{
   display: flex;
   align-items: center;
+  padding: 1rem;
 }
 
 .navi { 
@@ -65,6 +70,7 @@ img#avatar {
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
+
 }
 
 /* Containter for the youtube box 
@@ -74,6 +80,7 @@ CSS to make it responsive*/
   flex-direction: column;
   justify-content: center;
   height: 70vh;
+  border-image: ;
 }
 .yt h1 {
   margin-top: 5%;
@@ -83,7 +90,21 @@ iframe{
   width: 85%;
   height: 85%;
   margin: 5% auto 5% auto;
+  /* border: 5px solid rgb(75, 157, 233);
+  z-index: 999; 
+  opacity: 0.4; */
+  border: 10px solid rgb(85, 151, 226, 0.5);
 }
+/* .imgWrap{
+  position:relative;
+}
+.imgWrap:after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0; left:0; right:0;
+  opacity:0.5;
+  border:5px solid rgb(89, 194, 226);
+} */
 
 .git { 
   grid-area: git;
@@ -92,6 +113,7 @@ iframe{
 .git a{
   width: 50%;
   margin: 5%;
+  border: 10px solid rgb(85, 151, 226, 0.5);
 }
 .git img, .ard img{
   width: 100%;
@@ -106,12 +128,14 @@ iframe{
 .ard a{
   width: 50%;
   margin: 5%;
+  border: 10px solid rgb(85, 151, 226, 0.5);
 }
 
 .skill{ 
   grid-area: skill;
   flex-direction: column;
   contain: content;
+  background-color: rgb(85, 151, 226, 0.5);
 }
 
 .skill ul{
@@ -126,6 +150,7 @@ iframe{
 }
 .cert { 
   grid-area: cert; 
+  background-color: rgb(85, 151, 226, 0.5)
 }
 
 .cert h1{
@@ -157,39 +182,44 @@ iframe{
   "p3 p4"
   "p5 p6"
   "p7 p8";
+  background-color: rgb(85, 151, 226, 0.5)
 }
 
 .tech h1{
   margin: 0 auto;
   width: fit-content;
+  margin-top: 1rem;
+  
 }
 
-.tech #p1{
+.tech p{
   /* position and list-style required for animated progress bar */
   position: relative;
   list-style: none;
-  margin: 50px 0;
+  margin: 50px 20px;
+  font-weight: 200;
+  text-transform: uppercase;
 }
 
-.tech #p1:before{
+.tech p:before{
   content: "";
   position: absolute;
-  top: 0;
+  top: calc(100% + 10px);
   left: 0;
   width: 100%;
   height: 15px;
-  background-color: rgba(54, 126, 233, 0.5);
+  background-color: rgba(31, 106, 204, 0.5);
   border-radius: 1000px;
 }
 
-.tech #p1:after{
+.tech p:after{
   content: "";
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
   width: 0;
   height: 15px;
-  background-color: rgba(54, 126, 233, 1);
+  background-color: rgb(113, 165, 233);
   border-radius: 1000px;
   animation-duration: 4s;
   animation-timing-function: ease;
@@ -206,6 +236,75 @@ iframe{
   }
 }
 
+.tech #p2:after{
+  animation-name: css;
+}
+
+@keyframes css{
+  to {
+    width: 20%;
+  }
+}
+
+.tech #p3:after{
+  animation-name: javascript;
+}
+
+@keyframes javascript{
+  to {
+    width: 30%;
+  }
+}
+.tech #p4:after{
+  animation-name: csharp;
+}
+
+@keyframes csharp{
+  to {
+    width: 40%;
+  }
+}
+.tech #p5:after{
+  animation-name: tsql;
+}
+
+@keyframes tsql{
+  to {
+    width: 80%;
+  }
+}
+.tech #p6:after{
+  animation-name: autocad;
+}
+
+@keyframes autocad{
+  to {
+    width: 70%;
+  }
+}
+.tech #p7:after{
+  animation-name: excelvba;
+}
+
+@keyframes excelvba{
+  to {
+    width: 80%;
+  }
+}
+.tech #p8:after{
+  animation-name: cplus;
+}
+
+@keyframes cplus{
+  to {
+    width: 50%;
+  }
+}
+
+/* Naming grid cells for Tech Skills section */
+#techH1 {
+  grid-area: techH1;
+}
 #p1 {
   grid-area: p1;
 }
@@ -268,5 +367,5 @@ iframe{
 }
 
 footer a:hover{
-  background: #00729D;
+  background: #5ef065;
 }
