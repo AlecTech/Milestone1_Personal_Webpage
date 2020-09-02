@@ -17,12 +17,23 @@
     font-weight: normal; 
     font-style: normal;
 }
+@font-face {
+    font-family: 'Oswald';
+    src: url( '../fonts/Oswald/OswaldSemiBold.ttf' );
+    src: url( '../fonts/Oswald/OswaldSemiBold.ttf' ) format( 'truetype' );
+    font-weight: normal; 
+    font-style: normal;
+   
+}
+
 
 h1 {
-    font-family: 'netherland_cracker', 'Courier New', 'Courier', 'monospace';
+    font-family: 'Oswald', 'Courier New', 'Courier', 'monospace';
     line-height: 2.5rem;
     letter-spacing: 0.1rem;
     margin-bottom: -1rem;
+    color: rgb(235, 175, 45);
+    font-size: 1.2rem;
     /* padding-left: 3%; */
 }
 

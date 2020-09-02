@@ -1,4 +1,4 @@
-*{ outline: .1px solid #ff0000 !important; }
+/* *{ outline: .1px solid #ff0000 !important; } */
     /* Body major attributes */
 body {
   background-image: url("../img/milkyway1.jpg");
@@ -6,13 +6,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  
   /* Ease In effect seems like page is decending*/
   transition-timing-function: ease-in;
-  transition-duration: 2000ms;
+  transition-duration: 800ms;
   align-self: auto;
   align-content: center;
-
   /* Grid setup */
   display: grid;
   grid-template-columns: 35% 60%;
@@ -30,21 +28,20 @@ body {
   "edu edu"
   "foot social";
 }
-
-    /*Grid for testing*/
-
-nav, section, footer{
+nav, footer, .social{
+  background-color: rgba(245, 124, 26, 0.7);
+  border-radius: 5%;
+}
+section {
   background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5%;
 }
 .navi a:hover {
   color: #ddddee; 
 } 
-
-
 #avatar { 
   grid-area: avatar; 
 }
-
 /* Profile picture */
 img#avatar {
   vertical-align: middle;
@@ -54,25 +51,21 @@ img#avatar {
   flex-shrink: 0;
   margin: 1rem 1rem 1rem 0;
 }
-
 .skill ul, #certList{
   display: flex;
 }
-
 .navi, .yt, .git, .ard, .skill, .foot{
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 0.8rem;
 }
-
 .navi { 
   grid-area: nav; 
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: center;
-
+  justify-content: space-evenly;
 }
-
+.navi a{
+  margin: 5%;
+}
 /* Containter for the youtube box 
 CSS to make it responsive*/
 .yt { 
@@ -80,32 +73,17 @@ CSS to make it responsive*/
   flex-direction: column;
   justify-content: center;
   height: 70vh;
-  border-image: ;
 }
 .yt h1 {
   margin-top: 5%;
 }
-
 iframe{
   width: 85%;
   height: 85%;
   margin: 5% auto 5% auto;
-  /* border: 5px solid rgb(75, 157, 233);
-  z-index: 999; 
-  opacity: 0.4; */
+  border-radius: 5%;
   border: 10px solid rgb(85, 151, 226, 0.5);
 }
-/* .imgWrap{
-  position:relative;
-}
-.imgWrap:after{
-  content:"";
-  position:absolute;
-  top:0; bottom:0; left:0; right:0;
-  opacity:0.5;
-  border:5px solid rgb(89, 194, 226);
-} */
-
 .git { 
   grid-area: git;
   flex-direction: column;
@@ -114,63 +92,63 @@ iframe{
   width: 50%;
   margin: 5%;
   border: 10px solid rgb(85, 151, 226, 0.5);
+  border-radius: 5%;
 }
 .git img, .ard img{
   width: 100%;
 }
-
 .ard { 
   grid-area: ard;
   flex-direction: column;
   contain: content;
 }
-
 .ard a{
   width: 50%;
   margin: 5%;
   border: 10px solid rgb(85, 151, 226, 0.5);
+  border-radius: 5%;
 }
-
 .skill{ 
   grid-area: skill;
   flex-direction: column;
   contain: content;
-  background-color: rgb(85, 151, 226, 0.5);
+  /* background-color: rgb(85, 151, 226, 0.5); */
+  border-radius: 5%;
 }
-
+.skill h1{
+  padding:0;
+  margin-bottom: 5%;
+}
 .skill ul{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 10px;
 }
-
 .skill ul li{
   width: 45%;
+  margin: 1%;
 }
 .cert { 
   grid-area: cert; 
-  background-color: rgb(85, 151, 226, 0.5)
+  /* background-color: rgb(85, 151, 226, 0.5); */
+  border-radius: 5%;
 }
-
 .cert h1{
   margin: 0 auto;
   width: fit-content;
 }
-
 #certList {
   width: 100%;
   flex-wrap: wrap;
   contain: content;
   justify-content: space-around;
 }
-
 #certList img{
   width: 35%;
   margin-bottom: 2.5%;
   image-rendering: pixelated;
 }
-
 /* setting up Tech grid inside Body grid */
 .tech{ 
   grid-area: tech; 
@@ -182,25 +160,22 @@ iframe{
   "p3 p4"
   "p5 p6"
   "p7 p8";
-  background-color: rgb(85, 151, 226, 0.5)
+  /* background-color: rgb(85, 151, 226, 0.5); */
+  border-radius: 5%;
 }
-
 .tech h1{
   margin: 0 auto;
   width: fit-content;
-  margin-top: 1rem;
-  
+  margin-top: 0.5rem;
 }
-
 .tech p{
   /* position and list-style required for animated progress bar */
   position: relative;
   list-style: none;
-  margin: 50px 20px;
+  margin: 20px 20px 35px 20px;
   font-weight: 200;
   text-transform: uppercase;
 }
-
 .tech p:before{
   content: "";
   position: absolute;
@@ -211,7 +186,6 @@ iframe{
   background-color: rgba(31, 106, 204, 0.5);
   border-radius: 1000px;
 }
-
 .tech p:after{
   content: "";
   position: absolute;
@@ -225,31 +199,25 @@ iframe{
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
-
 .tech #p1:after{
   animation-name: html;
 }
-
 @keyframes html{
   to {
     width: 50%;
   }
 }
-
 .tech #p2:after{
   animation-name: css;
 }
-
 @keyframes css{
   to {
     width: 20%;
   }
 }
-
 .tech #p3:after{
   animation-name: javascript;
 }
-
 @keyframes javascript{
   to {
     width: 30%;
@@ -258,7 +226,6 @@ iframe{
 .tech #p4:after{
   animation-name: csharp;
 }
-
 @keyframes csharp{
   to {
     width: 40%;
@@ -267,7 +234,6 @@ iframe{
 .tech #p5:after{
   animation-name: tsql;
 }
-
 @keyframes tsql{
   to {
     width: 80%;
@@ -276,7 +242,6 @@ iframe{
 .tech #p6:after{
   animation-name: autocad;
 }
-
 @keyframes autocad{
   to {
     width: 70%;
@@ -285,7 +250,6 @@ iframe{
 .tech #p7:after{
   animation-name: excelvba;
 }
-
 @keyframes excelvba{
   to {
     width: 80%;
@@ -294,13 +258,11 @@ iframe{
 .tech #p8:after{
   animation-name: cplus;
 }
-
 @keyframes cplus{
   to {
     width: 50%;
   }
 }
-
 /* Naming grid cells for Tech Skills section */
 #techH1 {
   grid-area: techH1;
@@ -329,7 +291,6 @@ iframe{
 #p8 {
   grid-area: p8;
 }
-
 .work { 
   grid-area: work; 
   padding: 5%;
@@ -341,21 +302,21 @@ iframe{
   grid-area: edu; 
   padding: 5%;
 }
-
 .social { 
-  grid-area: social; 
+  grid-area: social;
+  font-size: 1.5rem;
 }
-
 .social a{
   padding: 5%;
   margin: 5%;
+  border: 2px solid blue;
 }
-
-.foot { 
-  justify-content: center;
+.foot{ 
   flex-direction: column;
+  justify-content: center;
   font-family: sans-serif;
   grid-area: foot;
+  grid-gap: 10%;
 }
 .downloadBtn {
   display: block;
@@ -365,7 +326,6 @@ iframe{
   width: 70%;
   border-radius: 5px;
 }
-
 footer a:hover{
   background: #5ef065;
 }
