@@ -26,7 +26,6 @@ body {
   "tech tech"
   "work work"
   "edu edu"
-  "validForm validForm"
   "foot social"
   ;
 }
@@ -330,7 +329,4 @@ iframe{
 }
 footer a:hover{
   background: #5ef065;
-}
-#validForm{
-  grid-area: validForm;
 }

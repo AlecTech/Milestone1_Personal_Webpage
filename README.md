@@ -19,6 +19,8 @@ https://www.geeksforgeeks.org/how-to-add-fade-in-effect-using-pure-javascript/#:
 # Skill progress bar
 https://www.youtube.com/watch?v=JkhhzfkXFSA
 
+# Contact Form html and css
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form
 
 
 # Nav (css)

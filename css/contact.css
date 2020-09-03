@@ -1,3 +1,99 @@
+body {
+  background-image: url("../img/milkyway1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  /* Ease In effect seems like page is decending*/
+  transition-timing-function: ease-in;
+  transition-duration: 900ms;
+  align-self: auto;
+  align-content: center;
+  /* Grid setup */
+  display: grid;
+  grid-template-columns: 35% 60%;
+  row-gap: 20px;
+  column-gap: 5%;
+  grid-template-areas: 
+  "nav nav"
+  "validForm validForm"
+  "foot social"
+  ;
+}
+#validForm{
+  grid-area: validForm;
+}
+
+
+
+.social { 
+  grid-area: social;
+  font-size: 1.5rem;
+}
+.social a{
+  padding: 5%;
+  margin: 5%;
+  border: 2px solid blue;
+}
+.foot{ 
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif;
+  grid-area: foot;
+  grid-gap: 10%;
+}
+.downloadBtn {
+  display: block;
+  background: #fff;
+  padding: 5px;
+  margin-top: 5%;
+  width: 70%;
+  border-radius: 5px;
+}
+footer a:hover{
+  background: #5ef065;
+}
+
+
+
+nav, footer, .social{
+  background-color: rgba(245, 124, 26, 0.7);
+  border-radius: 5%;
+}
+section {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5%;
+}
+.navi a:hover {
+  color: #ddddee; 
+} 
+#avatar { 
+  grid-area: avatar; 
+}
+/* Profile picture */
+img#avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 130px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.navi, .yt, .git, .ard, .skill, .foot{
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+}
+.navi { 
+  grid-area: nav; 
+  justify-content: space-evenly;
+}
+.navi a{
+  margin: 5%;
+}
+
+/* Contact form */
 #validForm {
     width:90%;
     display: flex;
