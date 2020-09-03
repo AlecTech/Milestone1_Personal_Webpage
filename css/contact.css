@@ -1,3 +1,4 @@
+/* copied from the main.css setup for the body, footer, social and nav part */
 body {
   background-image: url("../img/milkyway1.jpg");
   background-size: cover;
@@ -9,7 +10,8 @@ body {
   transition-duration: 900ms;
   align-self: auto;
   align-content: center;
-  /* Grid setup */
+  /* Grid setup is different from the main.css 
+  (excludes every ection except nav footer and social */
   display: grid;
   grid-template-columns: 35% 60%;
   row-gap: 20px;
@@ -20,16 +22,16 @@ body {
   "foot social"
   ;
 }
+/* set up form section inside new grid for contact page */
 #validForm{
   grid-area: validForm;
 }
-
-
-
+/* copied form main.css */
 .social { 
   grid-area: social;
   font-size: 1.5rem;
 }
+/* font awesome icons borders */
 .social a{
   padding: 5%;
   margin: 5%;
@@ -42,6 +44,7 @@ body {
   grid-area: foot;
   grid-gap: 10%;
 }
+/* download button inside footer */
 .downloadBtn {
   display: block;
   background: #fff;
@@ -54,8 +57,7 @@ footer a:hover{
   background: #5ef065;
 }
 
-
-
+/* comon attributes for 3 sections */
 nav, footer, .social{
   background-color: rgba(245, 124, 26, 0.7);
   border-radius: 5%;
@@ -79,12 +81,13 @@ img#avatar {
   flex-shrink: 0;
   margin: 1rem 1rem 1rem 0;
 }
-
+/* common attributes for this sections */
 .navi, .yt, .git, .ard, .skill, .foot{
   display: flex;
   align-items: center;
   padding: 0.8rem;
 }
+/* alignment/spacing of items inside navigation */
 .navi { 
   grid-area: nav; 
   justify-content: space-evenly;
@@ -101,7 +104,7 @@ img#avatar {
     justify-content: center;
     margin: 0 5% 0 5%;
 }
-
+/* common css attributes for 2 input areas 1 select and 1 textarea inside contact.html  */
 input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
