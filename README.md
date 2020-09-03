@@ -16,6 +16,10 @@ https://www.w3schools.com/howto/howto_css_download_button.asp
 # Fad-in Profile picture JS Effect
 https://www.geeksforgeeks.org/how-to-add-fade-in-effect-using-pure-javascript/#:~:text=The%20fade%20effect%20is%20described,as%20the%20fade%2Din%20effect.
 
+# Skill progress bar
+https://www.youtube.com/watch?v=JkhhzfkXFSA
+
+
 
 # Nav (css)
   /* Navigation Css Starts*/
