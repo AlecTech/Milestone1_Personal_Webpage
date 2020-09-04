@@ -313,10 +313,10 @@ iframe{
   border: 2px solid blue;
 }
 .foot{ 
+  grid-area: foot;
   flex-direction: column;
   justify-content: center;
   font-family: sans-serif;
-  grid-area: foot;
   grid-gap: 10%;
 }
 .downloadBtn {
