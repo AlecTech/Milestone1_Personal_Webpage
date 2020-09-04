@@ -18,11 +18,16 @@ body {
   column-gap: 5%;
   grid-template-areas: 
   "nav nav"
+  "error_message error_message"
   "validForm validForm"
   "foot social"
   ;
 }
 /* set up form section inside new grid for contact page */
+#error_message{
+  grid-area: error_message;
+}
+
 #validForm{
   grid-area: validForm;
 }

@@ -20,23 +20,36 @@ function show() {
     } 
 }
 
-const validForm = document.querySelector('#validForm');
-console.log(validForm);
-const fName = document.querySelector('#fullName');
-console.log(fName);
-const subject = document.querySelector('#subj');
-console.log(subject);
-const uEmail = document.querySelector('#userEmail');
-console.log(uEmail);
-const uText = document.querySelector('#userText');
-console.log(uText);
-const clickSubmit = document.querySelector('input[type="submit"]');
-console.log(clickSubmit);
-var error_message = document.getElementById("error_message");
-console.log(error_message);
+
+    const validForm = document.getElementById('validForm');
+    console.log(validForm);
+    const fName = document.getElementById('fullName');
+    console.log(fName);
+    const subject = document.getElementById('subj');
+    console.log(subject);
+    const uEmail = document.getElementById('userEmail');
+    console.log(uEmail);
+    const uText = document.getElementById('userText');
+    console.log(uText);
+    const clickSubmit = document.querySelector('input[type="submit"]');
+    console.log(clickSubmit);
+    var error_message = document.getElementById("error_message");
+    console.log(error_message);
 
 
+    validForm.addEventListener('submit', (event) => {
+        let error =[]
+        if (fName.value === "" || fName.value == null){
+            error.push("Full Name please!")
+        }
+        if (error.length > 0){
+            event.preventDefault()
+            error_message.innerHTML = error.join(",");
+            console.log(error);
+            console.log(error_message);
 
+        }
+    });
 //  validForm.addEventListener('submit', (event) => 
 //  {
 //         event.preventDefault();
