@@ -105,7 +105,7 @@ img#avatar {
     margin: 0 5% 0 5%;
 }
 /* common css attributes for 2 input areas 1 select and 1 textarea inside contact.html  */
-input[type=text], select, textarea {
+input[type=text], textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
@@ -131,9 +131,18 @@ input[type=text], select, textarea {
     background-color: #45a049;
   }
   
+  #error_message{
+    margin-bottom: 20px;
+    background: #fe8b8e;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+  }
+
   /* Add a background color and some padding around the form */
-  .container {
+  /* .container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-  }
+  } */
