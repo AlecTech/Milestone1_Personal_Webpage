@@ -21,6 +21,7 @@ function show() {
 }
 
 
+
     const validForm = document.getElementById('validForm');
     console.log(validForm);
     const fName = document.getElementById('fullName');
@@ -33,22 +34,69 @@ function show() {
     console.log(uText);
     const clickSubmit = document.querySelector('input[type="submit"]');
     console.log(clickSubmit);
-    var error_message = document.getElementById("error_message");
-    console.log(error_message);
+    var errorMessage = document.getElementById("errorMessage");
+    console.log(errorMessage);
 
 
-    validForm.addEventListener('submit', (event) => {
-        let error =[]
-        if (fName.value === "" || fName.value == null){
-            error.push("Full Name please!")
-        }
-        if (error.length > 0){
-            event.preventDefault()
-            error_message.innerHTML = error.join(",");
-            console.log(error);
-            console.log(error_message);
+    function validateForm() 
+{
+    var x = document.forms["subject"]["fName"].value;
+    if (x == "") 
+    {
+      alert("Name must be filled out");
+      return false;
+    }
+}
 
-        }
+var resetErrors = function () {
+    var error = document.getElementById(errorMessage)
+    for (var i = 0; i < error.length ; i++) {
+        error[i].remove()
+    }
+}
+    validForm.addEventListener('submit', function (event) {
+        event.preventDefault()
+        console.log('clicked');
+        console.log(fName.value);
+        console.log(subject.value);
+        console.log(uEmail.value);
+        console.log(uText.value);
+        console.log(clickSubmit.value);
+        console.log(errorMessage.value);
+        
+        // const fName = document.getElementById('fullName');
+       
+        // let newForm = new FormData (validForm);
+        // console.log(newForm);
+        
+     //   while (error.length > 0)
+      //  {
+        let error =[];
+            if (fName.value === '' || fName.value == null)
+            {   
+                error.push("Full Name must be entered");
+               //console.log(fName.length);
+           }
+           
+           if (subject.value === '' || subject.value == null)
+           {   
+               error.push("Subject field must be present");
+           }
+            //   const x = false;
+        //    if(uEmail.contains("A") == false)
+        //    {    let error =[];
+        //        error.push("Not a valid Email");
+        //    }
+           
+       
+           if (error.length > 0)
+           {   
+               //event.preventDefault();
+               errorMessage.innerText = error.join(",  ");
+            }
+
+       // }
+      resetErrors()
     });
 //  validForm.addEventListener('submit', (event) => 
 //  {
