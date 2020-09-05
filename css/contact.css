@@ -28,7 +28,7 @@ body {
   grid-area: errorMessage;
 }
 
-#validForm{
+.validForm{
   grid-area: validForm;
 }
 /* copied form main.css */
@@ -102,7 +102,7 @@ img#avatar {
 }
 
 /* Contact form */
-#validForm {
+.validForm {
     width:90%;
     display: flex;
     flex-direction: column;

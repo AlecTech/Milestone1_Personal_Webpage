@@ -25,23 +25,23 @@
     <div id="errorMessage">
      
     </div>
-    <form id="validForm">
 
-        <label for="fullName">Enter Your Name</label>
-        <input type="text" id="fullName" name="fname" placeholder="Your name.." value="">
+    <form class='validForm'>
     
-        <label for="subj">Subject</label>
-        <input type="text" id="subj" name="subject" placeholder="Enter subject.." value=""> 
-
-        <label for="userEmail">Your Email</label>
-        <input type="text" id="userEmail" name="uEmail" placeholder="Enter your email.." value="">
-    
-        <label for="userText">Message</label>
-        <textarea id="userText" name="uText" placeholder="Write something.." style="height: 200px;" value=""></textarea>
-    
-        <input id="click" type="submit" name="submit" value="Submit">
-    
-    </form>
+            <label for="fname">Full Name:</label>
+            <input id="fname" type='text' class='fullName field' />
+         
+            <label for="email">Email:</label>
+            <input id="email" type='email' class='email field' name="email"/>
+         
+            <label for="subj" >Subject:</label>
+            <input id="subj" type="subject" class='subject field' name="subject"/>
+       
+            <label for="mess" >Message:</label>
+            <textarea id="mess" class='message field' name="message"></textarea>
+        
+        <input type='submit' class='submitBtn' value='Submit'/>
+      </form>
 
     <section class="social">
         <!-- Add font awesome icons -->

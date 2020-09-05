@@ -20,84 +20,117 @@ function show() {
     } 
 }
 
+const form = document.querySelector('.validForm')
+const submitBtn = form.querySelector('.submitBtn') 
+const fullName = form.querySelector('.fullName')
+const email = form.querySelector('.email') 
 
+const subject = form.querySelector('.subject')
+const message = form.querySelector('.message')
+const fields = form.querySelectorAll('.field')
 
-    const validForm = document.getElementById('validForm');
-    console.log(validForm);
-    const fName = document.getElementById('fullName');
-    console.log(fName);
-    const subject = document.getElementById('subj');
-    console.log(subject);
-    const uEmail = document.getElementById('userEmail');
-    console.log(uEmail);
-    const uText = document.getElementById('userText');
-    console.log(uText);
-    const clickSubmit = document.querySelector('input[type="submit"]');
-    console.log(clickSubmit);
-    var errorMessage = document.getElementById("errorMessage");
-    console.log(errorMessage);
+const errorMessage = document.getElementById("errorMessage"); // string of errors inactive
+ 
+form.addEventListener('submit', function (event) {
+    event.preventDefault()
 
+    let errors = form.querySelectorAll('.error')
 
-    function validateForm() 
-{
-    var x = document.forms["subject"]["fName"].value;
-    if (x == "") 
-    {
-      alert("Name must be filled out");
-      return false;
+    for (var i = 0; i < errors.length; i++) {
+      errors[i].remove()
     }
-}
+    
+    for (var i = 0; i < fields.length; i++) {
+        if (!fields[i].value) {
+            console.log('field is blank', fields[i])
+            let error = document.createElement('div')
+            error.className='error'
+            error.style.color = 'red' //css needs to relocate
+            error.innerHTML = 'Cannot be blank'
+            form[i].parentElement.insertBefore(error, fields[i])
+        }
+      }
+      
+      const badWords = ["feldercarb", "frack", "skinjob", "vulgacarb"];
 
-var resetErrors = function () {
-    var error = document.getElementById(errorMessage)
-    for (var i = 0; i < error.length ; i++) {
-        error[i].remove()
-    }
-}
-    validForm.addEventListener('submit', function (event) {
-        event.preventDefault()
-        console.log('clicked');
-        console.log(fName.value);
-        console.log(subject.value);
-        console.log(uEmail.value);
-        console.log(uText.value);
-        console.log(clickSubmit.value);
-        console.log(errorMessage.value);
-        
-        // const fName = document.getElementById('fullName');
-       
-        // let newForm = new FormData (validForm);
-        // console.log(newForm);
-        
-     //   while (error.length > 0)
-      //  {
-        let error =[];
-            if (fName.value === '' || fName.value == null)
-            {   
-                error.push("Full Name must be entered");
-               //console.log(fName.length);
-           }
-           
-           if (subject.value === '' || subject.value == null)
-           {   
-               error.push("Subject field must be present");
-           }
-            //   const x = false;
-        //    if(uEmail.contains("A") == false)
-        //    {    let error =[];
-        //        error.push("Not a valid Email");
-        //    }
-           
-       
-           if (error.length > 0)
-           {   
-               //event.preventDefault();
-               errorMessage.innerText = error.join(",  ");
-            }
+      if (!null == message.match(feldercarb/frack/skinjob/vulgacarb/bad)) 
+      {
+        console.log('equals')
+        let error = document.createElement('div')
+        error.className = 'error'
+        error.style.color = 'red'
+        error.innerHTML = 'You entered an invalid word'
+        message.parentElement.insertBefore(error, message)
+      }
 
-       // }
-      resetErrors()
-    });
+  })
+
+
+
+// function validateForm() 
+// {
+// var x = document.forms["subject"]["fName"].value;
+// if (x == "") 
+// {
+//   alert("Name must be filled out");
+//   return false;
+// }
+// }
+
+// var resetErrors = function () {
+// var error = document.getElementById(errorMessage)
+// for (var i = 0; i < error.length ; i++) {
+//     error[i].remove()
+// }
+// }
+//===================================================2
+// validForm.addEventListener('submit', function (event) {
+//     event.preventDefault()
+
+//     //console.log('clicked');
+//     console.log(fName.value);
+//     console.log(subject.value);
+//     console.log(uEmail.value);
+//     console.log(uText.value);
+//     console.log(clickSubmit.value);
+//     console.log(errorMessage.value);
+  //=====================================================2
+    // const fName = document.getElementById('fullName');
+   
+    // let newForm = new FormData (validForm);
+    // console.log(newForm);
+    
+ //   while (error.length > 0)
+  //  {
+      //=================================3
+//     let error =[];
+//         if (fName.value === '' || fName.value == null)
+//         {   
+//             error.push("Full Name must be entered");
+//            //console.log(fName.length);
+//        }
+       
+//        if (subject.value === '' || subject.value == null)
+//        {   
+//            error.push("Subject field must be present");
+//        }
+//         //   const x = false;
+//     //    if(uEmail.contains("A") == false)
+//     //    {    let error =[];
+//     //        error.push("Not a valid Email");
+//     //    }
+       
+   
+//        if (error.length > 0)
+//        {   
+//            //event.preventDefault();
+//            errorMessage.innerText = error.join(",  ");
+//         }
+
+//    // }
+//   //resetErrors()
+// });
+//================================================3
 //  validForm.addEventListener('submit', (event) => 
 //  {
 //         event.preventDefault();
