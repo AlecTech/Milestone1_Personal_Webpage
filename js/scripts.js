@@ -24,24 +24,31 @@ const form = document.querySelector('.validForm')
 const submitBtn = form.querySelector('.submitBtn') 
 const fullName = form.querySelector('.fullName')
 const email = form.querySelector('.email') 
-
 const subject = form.querySelector('.subject')
 const message = form.querySelector('.message')
 const fields = form.querySelectorAll('.field')
 
 const errorMessage = document.getElementById("errorMessage"); // string of errors inactive
  
+//console.log(message.value);
+
 form.addEventListener('submit', function (event) {
     event.preventDefault()
+
+    let errorIndicator = new Boolean (false);
+    errorIndicator = false;
 
     let errors = form.querySelectorAll('.error')
 
     for (var i = 0; i < errors.length; i++) {
       errors[i].remove()
+      errorIndicator = false;
     }
     
     for (var i = 0; i < fields.length; i++) {
-        if (!fields[i].value) {
+        if (!fields[i].value) 
+        {
+            errorIndicator = true;
             console.log('field is blank', fields[i])
             let error = document.createElement('div')
             error.className='error'
@@ -51,19 +58,29 @@ form.addEventListener('submit', function (event) {
         }
       }
       
-      const badWords = ["feldercarb", "frack", "skinjob", "vulgacarb"];
+      const badWords = ["feldercarb", "frack", "skinjob", "vulgacarb", "bad"];
 
-      if (!null == message.match(feldercarb/frack/skinjob/vulgacarb/bad)) 
+      for (word of badWords) 
       {
-        console.log('equals')
-        let error = document.createElement('div')
-        error.className = 'error'
-        error.style.color = 'red'
-        error.innerHTML = 'You entered an invalid word'
-        message.parentElement.insertBefore(error, message)
-      }
+         
+        if (message.value.includes(word))
+        {
+            errorIndicator = true;
 
-  })
+            let error = document.createElement('div')
+            error.className = 'error'
+            error.style.color = 'red'
+            error.innerHTML = 'You entered an invalid word'
+            message.parentElement.insertBefore(error, message)
+        }
+    }
+   
+    if (!errorIndicator)
+    {
+        window.location.href = `mailto:${email.value}?subject=${subject.value}&Body=${message.value}`;
+    }
+    
+  });
 
 
 
