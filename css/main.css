@@ -29,7 +29,7 @@ body {
   "foot social"
   ;
 }
-nav, footer, .social{
+footer, .social{
   background-color: rgba(245, 124, 26, 0.7);
   border-radius: 5%;
 }
@@ -63,6 +63,24 @@ img#avatar {
 .navi { 
   grid-area: nav; 
   justify-content: space-evenly;
+  background: linear-gradient(-45deg, rgba(45,112,162,0.9002695417789758) 22%, rgba(104,144,32,0.9029649595687331) 64%); 
+  /* (-45deg, #EE7752, #E73C76, #23A695, #23D5AB)*/
+  /* (-45deg, rgba(47,16,68,0.9002695417789758) 23%, rgba(190,72,72,1) 56%, rgba(252,176,69,1) 100%); */
+  /* background: rgb(45,112,162); */
+  border-radius: 5%;
+  background-size: 400% 400%;
+  animation: change 10s ease-in-out infinite;
+}
+@keyframes change {
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    /* 100%{
+      background-position: 0 50%;
+    } */
 }
 .navi a{
   margin: 5%;
@@ -76,7 +94,7 @@ content: '';
 display: block;
 width: 0;
 height: 2px;
-background: #fff;
+background: rgb(21, 226, 72);
 transition: width .3s;
 }
 .links:hover::after {
@@ -155,6 +173,7 @@ iframe{
 .cert h1{
   margin: 0 auto;
   width: fit-content;
+  padding: 5% 0 5% 0;
 }
 #certList {
   width: 100%;
