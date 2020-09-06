@@ -74,7 +74,7 @@ form.addEventListener('submit', function (event) {
       //for of loop to cycle througt 5 words
       for (word of badWords) // word with have new bad word each iteration
       { //check if bad word is present inside user's message 
-        if (message.value.includes(word))
+        if (message.value.includes(word)) // message.value.match(felbercarb/frack) didn't work for some reason
         {   // if invalid word is indicated then print another warning message above textarea
             errorIndicator = true;
             let error = document.createElement('div')
@@ -87,7 +87,7 @@ form.addEventListener('submit', function (event) {
    // if no errors found then redirect submitted form to mailto client
     if (!errorIndicator)
     {
-        window.location.href = `mailto:${email.value}?subject=${subject.value}&Body=${message.value}`;
+        const mail = "eremeevoleg@gmail.com"
+        window.location.href = `mailto:${mail}?subject=${subject.value}&Body=${message.value}`;
     }
-    
   });
