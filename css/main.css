@@ -323,7 +323,7 @@ iframe{
   display: block;
   background: #fff;
   padding: 5px;
-  margin-top: 5%;
+  margin-top: 1.5rem 0 1.5rem 0;
   width: 70%;
   border-radius: 5px;
 }

@@ -24,8 +24,11 @@ body {
   ;
 }
 /* set up form section inside new grid for contact page */
-#errorMessage{
+h1.contact{
   grid-area: errorMessage;
+  display: flex;
+  justify-content: center;
+  /* transition: all 0.5s ease; */
 }
 
 .validForm{
@@ -62,7 +65,7 @@ footer a:hover{
   background: #5ef065;
 }
 
-/* comon attributes for 3 sections */
+/* common attributes for 3 sections */
 nav, footer, .social{
   background-color: rgba(245, 124, 26, 0.7);
   border-radius: 5%;
@@ -108,6 +111,7 @@ img#avatar {
     flex-direction: column;
     justify-content: center;
     margin: 0 5% 0 5%;
+   
 }
 /* common css attributes for 2 input areas 1 select and 1 textarea inside contact.html  */
 input[type=text], textarea {
@@ -135,19 +139,4 @@ input[type=text], textarea {
   input[type=submit]:hover {
     background-color: #45a049;
   }
-  
-  #errorMessage{
-    margin-bottom: 20px;
-    background: #fe8b8e;
-    padding: 0px;
-    text-align: center;
-    font-size: 14px;
-    transition: all 0.5s ease;
-  }
-
-  /* Add a background color and some padding around the form */
-  /* .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  } */
+ 

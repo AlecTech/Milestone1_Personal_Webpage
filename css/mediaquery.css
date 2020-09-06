@@ -25,11 +25,8 @@
         "cert cert cert"
         "edu edu edu"
         "work work work"
-        
-        
         "foot social social";
       }
-
       #avatar { 
         grid-area: avatar; 
       }
@@ -42,12 +39,10 @@
         flex-shrink: 0;
         margin: 1rem 1rem 1rem 0;
       }
-      
       .navi { 
         grid-area: nav; 
         justify-content: space-evenly;
       }
-      
       /* Containter for the youtube box 
       CSS to make it responsive*/
       .yt { 
@@ -68,30 +63,21 @@
         grid-area: git;
         flex-direction: column;
       }
-      
-     
       .ard { 
         grid-area: ard;
         flex-direction: column;
         contain: content;
       }
-     
       .skill{ 
         grid-area: skill;
         flex-direction: column;
         contain: content;
-        /* background-color: rgb(85, 151, 226, 0.5); */
         border-radius: 5%;
       }
-     
-    
-     
       .cert { 
         grid-area: cert; 
-        /* background-color: rgb(85, 151, 226, 0.5); */
         border-radius: 5%;
       }
-      
       /* setting up Tech grid inside Body grid */
       .tech{ 
         grid-area: tech; 
@@ -135,22 +121,18 @@
       #p8 {
         grid-area: p8;
       }
-
       .work { 
         grid-area: work; 
         padding: 5%;
       }
-      
       .edu { 
         grid-area: edu; 
         padding: 5%;
       }
-
       .social { 
         grid-area: social;
         font-size: 1.5rem;
       }
-
       .foot{ 
         grid-area: foot;
         flex-direction: column;
@@ -158,176 +140,161 @@
         font-family: sans-serif;
         grid-gap: 10%;
       }
-
 }
 
 @media screen and (min-width: 1250px)
 {
-    body 
-     {
-        background-image: url("../img/milkyway1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        /* Ease In effect seems like page is decending*/
-        transition-timing-function: ease-in;
-        transition-duration: 800ms;
-        align-self: auto;
-        align-content: center;
-        /* Grid setup */
-        display: grid;
-        grid-template-columns: 23% 23% 23% 23%;
-        row-gap: 20px;
-        column-gap: 2.5%;
-        grid-template-areas: 
-        "nav nav nav nav"
-        "git yt yt ard"
-        "tech yt yt skill"
-        "cert cert cert cert"
-        "work work work edu"
-        "work work work social"
-        "foot foot foot foot";
-      }
-
-      #avatar { 
-        grid-area: avatar; 
-      }
-      /* changed Profile picture w and h plus 30px */
-      img#avatar {
-        vertical-align: middle;
-        width: 130px;
-        height: 160px;
-        border-radius: 50%;
-        flex-shrink: 0;
-        margin: 1rem 1rem 1rem 0;
-      }
-      
-      .navi { 
-        grid-area: nav; 
-        justify-content: space-evenly;
-      }
-      
-      /* Containter for the youtube box 
-      CSS to make it responsive*/
-      .yt { 
-        grid-area: yt;
-        flex-direction: column;
-        justify-content: center;
-        height: 70vh;
-      }
-     /* changed height to 100% from 85% */
-      iframe{
-        width: 85%;
-        height: 100%;
-        margin: 5% auto 5% auto;
-        border-radius: 5%;
-        border: 10px solid rgb(85, 151, 226, 0.5);
-      }
-      .git { 
-        grid-area: git;
-        flex-direction: column;
-      }
-      
-     
-      .ard { 
-        grid-area: ard;
-        flex-direction: column;
-        contain: content;
-      }
-     
-      .skill{ 
-        grid-area: skill;
-        flex-direction: column;
-        contain: content;
-        /* background-color: rgb(85, 151, 226, 0.5); */
-        border-radius: 5%;
-      }
-     
-    
-     
-      .cert { 
-        grid-area: cert; 
-        border-radius: 5%;
-      }
-
-      #certList img{
-        width: 17%;
-        margin-bottom: 2.5%;
-        image-rendering: pixelated;
-      }
-
-      
-      /* setting up Tech grid inside Body grid */
-      .tech{ 
-        grid-area: tech; 
-        display: grid;
-        grid-gap: 0.1rem;
-        grid-template-areas: 
-        "techH1 techH1"
-        "p1 p2"
-        "p3 p4"
-        "p5 p6"
-        "p7 p8";
-        /* background-color: rgb(85, 151, 226, 0.5); */
-        border-radius: 5%;
-      }
-     
-      /* Naming grid cells for Tech Skills section */
-      #techH1 {
-        grid-area: techH1;
-      }
-      #p1 {
-        grid-area: p1;
-      }
-      #p2 {
-        grid-area: p2;
-      }
-      #p3 {
-        grid-area: p3;
-      }
-      #p4 {
-        grid-area: p4;
-      }
-      #p5 {
-        grid-area: p5;
-      }
-      #p6 {
-        grid-area: p6;
-      }
-      #p7 {
-        grid-area: p7;
-      }
-      #p8 {
-        grid-area: p8;
-      }
-
-      .work { 
-        grid-area: work; 
-        padding: 5%;
-      }
-      
-      .edu { 
-        grid-area: edu; 
-        padding: 5%;
-      }
-
-      .social { 
-        grid-area: social;
-        font-size: 1.5rem;
-      }
-      /* over ride social back color for 1250 wide screen */
-      .social{
-        background-color: rgba(255, 255, 255, 0.25);
-        border-radius: 5%;
-      }
-
-      .foot{ 
-        grid-area: foot;
-        flex-direction: column;
-        justify-content: center;
-        font-family: sans-serif;
-        grid-gap: 10%;
-      }
-
+  body 
+    {
+      background-image: url("../img/milkyway1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      /* Ease In effect seems like page is decending*/
+      transition-timing-function: ease-in;
+      transition-duration: 800ms;
+      align-self: auto;
+      align-content: center;
+      /* Grid setup */
+      display: grid;
+      grid-template-columns: 23% 23% 23% 23%;
+      row-gap: 20px;
+      column-gap: 2.5%;
+      grid-template-areas: 
+      "nav nav nav nav"
+      "git yt yt ard"
+      "tech yt yt skill"
+      "cert cert cert cert"
+      "work work work edu"
+      "work work work social"
+      "foot foot foot foot";
+    }
+  #avatar { 
+      grid-area: avatar; 
+    }
+    /* changed Profile picture w and h plus 30px */
+  img#avatar {
+      vertical-align: middle;
+      width: 130px;
+      height: 160px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin: 1rem 1rem 1rem 0;
+    }
+  .navi { 
+      grid-area: nav; 
+      justify-content: space-evenly;
+    }
+    /* Containter for the youtube box 
+    CSS to make it responsive*/
+  .yt { 
+      grid-area: yt;
+      flex-direction: column;
+      justify-content: center;
+      height: 70vh;
+    }
+    /* changed height to 100% from 85% */
+  iframe{
+      width: 85%;
+      height: 100%;
+      margin: 5% auto 5% auto;
+      border-radius: 5%;
+      border: 10px solid rgb(85, 151, 226, 0.5);
+    }
+  .git { 
+      grid-area: git;
+      flex-direction: column;
+    }
+  .ard { 
+      grid-area: ard;
+      flex-direction: column;
+      contain: content;
+    }
+  .skill{ 
+      grid-area: skill;
+      flex-direction: column;
+      contain: content;
+      /* background-color: rgb(85, 151, 226, 0.5); */
+      border-radius: 5%;
+    }
+  .cert { 
+      grid-area: cert; 
+      border-radius: 5%;
+    }
+  #certList img{
+      width: 17%;
+      margin-bottom: 2.5%;
+      image-rendering: pixelated;
+    }
+    /* setting up Tech grid inside Body grid */
+  .tech{ 
+      grid-area: tech; 
+      display: grid;
+      grid-gap: 0.1rem;
+      grid-template-areas: 
+      "techH1 techH1"
+      "p1 p2"
+      "p3 p4"
+      "p5 p6"
+      "p7 p8";
+      /* background-color: rgb(85, 151, 226, 0.5); */
+      border-radius: 5%;
+    }
+    /* Naming grid cells for Tech Skills section */
+  #techH1 {
+      grid-area: techH1;
+    }
+  #p1 {
+      grid-area: p1;
+    }
+  #p2 {
+      grid-area: p2;
+    }
+  #p3 {
+      grid-area: p3;
+    }
+  #p4 {
+      grid-area: p4;
+    }
+  #p5 {
+      grid-area: p5;
+    }
+  #p6 {
+      grid-area: p6;
+    }
+  #p7 {
+      grid-area: p7;
+    }
+  #p8 {
+      grid-area: p8;
+    }
+  .work { 
+      grid-area: work; 
+      padding: 5%;
+    }
+  .edu { 
+      grid-area: edu; 
+      padding: 5%;
+    }
+  /* .social { 
+      grid-area: social;
+      font-size: 1.5rem;
+    } */
+    /* over ride social back color for 1250 wide screen */
+  .social{
+      background-color: rgba(255, 255, 255, 0.25);
+      border-radius: 5%;
+      font-size: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  .foot{ 
+      grid-area: foot;
+      flex-direction: column;
+      justify-content: center;
+      font-family: sans-serif;
+      grid-gap: 10%;
+    }
 }
