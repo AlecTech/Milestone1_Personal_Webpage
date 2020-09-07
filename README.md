@@ -26,4 +26,15 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_contact_form
 # Nav inderline effect (css)
 https://www.youtube.com/watch?v=IYTBAQRBsw0
 
+# Nav Gradient effect
+https://www.youtube.com/watch?v=fBRzD6dwJfw
+
+# Outline Text H1 for better visibility
+https://css-tricks.com/adding-stroke-to-web-text/
+
+# For gradient modulation 
+https://cssgradient.io/
+
+# Collapse Certificate section
+https://www.youtube.com/watch?v=jXTfoKkPtYY
 

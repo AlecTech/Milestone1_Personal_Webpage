@@ -21,6 +21,21 @@ function show()
         clearInterval(intervalID); 
     } 
 }
+//
+document.querySelectorAll('button.expand').forEach(button => {
+    button.addEventListener('click', () => {
+        const certListConstent = button.nextElementSibling;
+
+        button.classList.toggle('expand--active');
+
+        if(button.classList.contains('expand--active')){
+            certListConstent.style.maxHeight = certListConstent.scrollHeight + 'px';
+        } else{
+            certListConstent.style.maxHeight = 0;
+        }
+    });
+});
+
 
 // function bigImg(x) {
 //     x.style.height = "420px";
