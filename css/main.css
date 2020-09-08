@@ -1,7 +1,7 @@
-/* *{ outline: .1px solid #ff0000 !important; } */
-    /* Body major attributes */
+
+    /* Body major attributes for iPhone size */
 body {
-  background-image: url("../img/milkyway1.jpg");
+  background-image: url("../img/natalieChaney.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -26,19 +26,21 @@ body {
   "tech tech"
   "work work"
   "edu edu"
-  "foot social"
-  ;
+  "foot social";
 }
+/* footer orange background */
 footer, .social{
   background-color: rgba(245, 124, 26, 0.7);
   border-radius: 5%;
 }
+/* all the sections background */
 section {
   background-color: rgba(255, 255, 255, 0.25);
   border-radius: 5%;
 }
+/* navigation hover effect */
 .navi a:hover {
-  color: #ddddee; 
+  color: hsl(96, 86%, 42%);
 } 
 #avatar { 
   grid-area: avatar; 
@@ -52,6 +54,7 @@ img#avatar {
   flex-shrink: 0;
   margin: 1rem 1rem 1rem 0;
 }
+/* display flex almost for all sections except .tech */
 .skill ul, #certList{
   display: flex;
 }
@@ -60,48 +63,45 @@ img#avatar {
   align-items: center;
   padding: 0.8rem;
 }
+/* navigation animated background gradient effect */
 .navi { 
   grid-area: nav; 
   justify-content: space-evenly;
-  background: linear-gradient(-45deg, rgba(45,112,162,0.9002695417789758) 22%, rgba(104,144,32,0.9029649595687331) 64%); 
-  /* (-45deg, #EE7752, #E73C76, #23A695, #23D5AB)*/
-  /* (-45deg, rgba(47,16,68,0.9002695417789758) 23%, rgba(190,72,72,1) 56%, rgba(252,176,69,1) 100%); */
-  /* background: rgb(45,112,162); */
+  background: linear-gradient(-20deg, rgba(33,67,126,0.86) 15%, rgba(232, 235, 229, 0.8) 42%, rgba(33,67,126,0.86) 100%); /*rgba(124, 74, 74, 0.69) 100%*/
   border-radius: 5%;
   background-size: 400% 400%;
-  animation: change 10s ease-in-out infinite;
+  animation: change 9s ease-in-out infinite;
 }
+/* animated backgrount gradient effect frames % change left to right and back */
 @keyframes change {
-    0%{
-      background-position: 0 50%;
-    }
-    50%{
-      background-position: 100% 50%;
-    }
-    /* 100%{
-      background-position: 0 50%;
-    } */
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
 }
 .navi a{
   margin: 5%;
-  /* display: inline-block; */
   text-decoration: none;
-  transform: translateX(-50%) translateY(-50%);
-  /* color: #fff; */
+  margin-top: 0rem;
 }
+/* underline navigation links on hover */
 .links::after {
-content: '';
-display: block;
-width: 0;
-height: 2px;
-background: rgb(21, 226, 72);
-transition: width .3s;
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: rgb(21, 226, 72);
+  transition: width .3s;
 }
 .links:hover::after {
   width: 100%;
   transition: width .3s;
 }
-
 /* Containter for the youtube box 
 CSS to make it responsive*/
 .yt { 
@@ -113,6 +113,7 @@ CSS to make it responsive*/
 .yt h1 {
   margin-top: 5%;
 }
+/* iframe for YouTube window */
 iframe{
   width: 85%;
   height: 85%;
@@ -148,7 +149,6 @@ iframe{
   grid-area: skill;
   flex-direction: column;
   contain: content;
-  /* background-color: rgb(85, 151, 226, 0.5); */
   border-radius: 5%;
 }
 .skill h1{
@@ -167,7 +167,6 @@ iframe{
 }
 .cert { 
   grid-area: cert; 
-  /* background-color: rgb(85, 151, 226, 0.5); */
   border-radius: 5%;
 }
 .cert h1{
@@ -175,17 +174,20 @@ iframe{
   width: fit-content;
   padding: 2.5% 0 2.5% 0;
 }
+/* certificates alignment inside section */
 #certList {
   width: 100%;
   flex-wrap: wrap;
   contain: content;
   justify-content: space-around;
 }
+/* images sizes and sharpness of the image */
 #certList img{
   width: 35%;
   margin-bottom: 2.5%;
   image-rendering: pixelated;
 }
+/* next 4 blocks of code for collapsable Certificate section */
 button.expand {
   display: block;
   width: 100%;
@@ -195,7 +197,6 @@ button.expand {
   cursor: pointer;
   background: #5a939b;
   color: rgb(148, 148, 16);
-  /* text-align: left; */
   transition: background 0.2s;
 }
 button.expand::after {
@@ -205,13 +206,12 @@ button.expand::after {
 }
 button.expand--active {background:#555555}
 button.expand--active::after {content: '\25b4'}
-
 #certList {
-  overflow: hidden;
+  overflow: hidden; /* hide content when press a button */
   max-height: 0;
   transition: max-height 0.3s;
 }
-
+/*============end of collapsable css code*/
 /* setting up Tech grid inside Body grid */
 .tech{ 
   grid-area: tech; 
@@ -223,7 +223,6 @@ button.expand--active::after {content: '\25b4'}
   "p3 p4"
   "p5 p6"
   "p7 p8";
-  /* background-color: rgb(85, 151, 226, 0.5); */
   border-radius: 5%;
 }
 .tech h1{
@@ -248,7 +247,7 @@ button.expand--active::after {content: '\25b4'}
   height: 15px;
   background-color: rgba(31, 106, 204, 0.5);
   border-radius: 1000px;
-}
+} /* upon page load all progress bars are light blue color*/
 .tech p:after{
   content: "";
   position: absolute;
@@ -261,10 +260,10 @@ button.expand--active::after {content: '\25b4'}
   animation-duration: 4s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
-}
+}/* 4 sec after page load all progress bars are filld with dark blue color*/
 .tech #p1:after{
   animation-name: html;
-}
+} /* each bar is filled individually according to % of knowledge*/
 @keyframes html{
   to {
     width: 50%;
@@ -386,7 +385,7 @@ button.expand--active::after {content: '\25b4'}
   background: #fff;
   padding: 5px;
   margin-top: 1.5rem 0 1.5rem 0;
-  width: 70%;
+  width: 100px;
   border-radius: 5px;
 }
 footer a:hover{

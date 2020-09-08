@@ -11,13 +11,6 @@
 }
   
 @font-face {
-    font-family: 'netherland_cracker';
-    src: url( '../fonts/netherland_cracker/NetherlandCrackerPersonalUse.ttf' );
-    src: url( '../fonts/netherland_cracker/NetherlandCrackerPersonalUse.ttf' ) format( 'truetype' );
-    font-weight: normal; 
-    font-style: normal;
-}
-@font-face {
     font-family: 'Oswald';
     src: url( '../fonts/Oswald/OswaldSemiBold.ttf' );
     src: url( '../fonts/Oswald/OswaldSemiBold.ttf' ) format( 'truetype' );
@@ -25,16 +18,13 @@
     font-style: normal;
    
 }
-
-
-h1 {
+h1, .navi a {
     font-family: 'Oswald', 'Courier New', 'Courier', 'monospace';
     line-height: 2.5rem;
     letter-spacing: 0.1rem;
     margin-bottom: -1rem;
-    /* color: rgb(235, 175, 45); */
     font-size: 1.7rem;
-
+    /* outline for more contrast on Headings */
     -webkit-text-stroke: 1px black;
     color: rgb(235, 175, 45);
     text-shadow:
@@ -43,9 +33,7 @@ h1 {
        1px -1px 0 #000,
        -1px 1px 0 #000,
         1px 1px 0 #000;
-    /* padding-left: 3%; */
 }
-
 h2, .validForm, nav{
     font-family: 'Rubik','Courier New', 'Courier', 'monospace';
     font-size: 1.2rem;
@@ -53,22 +41,14 @@ h2, .validForm, nav{
     margin-top: 1.2rem;
     font-weight: 700;
 }
-
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 15px;
 }
-
-nav a:hover {
-    /* TODO: Go to color.adobe.com and pick better colours that match your bg photo */
-    color: #0000dd; 
-} 
-
 .foot { 
     font-size: 12px;
 }
-
 .downloadBtn {
     text-decoration: none;
     text-align: center;

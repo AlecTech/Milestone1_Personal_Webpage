@@ -21,7 +21,8 @@ function show()
         clearInterval(intervalID); 
     } 
 }
-//
+//collapse Certificates section. Logic borrowed from https://www.youtube.com/watch?v=jXTfoKkPtYY
+// explained by Dom. 
 document.querySelectorAll('button.expand').forEach(button => {
     button.addEventListener('click', () => {
         const certListConstent = button.nextElementSibling;
@@ -35,18 +36,7 @@ document.querySelectorAll('button.expand').forEach(button => {
         }
     });
 });
-
-
-// function bigImg(x) {
-//     x.style.height = "420px";
-//     x.style.width = "547px";
-//   }
-  
-//   function normalImg(x) {
-//     x.style.height = "336px";
-//     x.style.width = "438px";
-//   }
-
+//================Contact form code=============
 // Setup variables for the validation logic
 const form = document.querySelector('.validForm')
 //const submitBtn = form.querySelector('.submitBtn') 
@@ -66,7 +56,8 @@ form.addEventListener('submit', function (event) {
     //find all errors generated from DOM if any
     let errors = form.querySelectorAll('.error')
     //for loop to clear all corrected warning messages from the screen after submit
-    for (var i = 0; i < errors.length; i++) {
+    for (var i = 0; i < errors.length; i++) 
+    {
       errors[i].remove()
       errorIndicator = false;//reset errorIndicator flag to false
     }
@@ -76,19 +67,19 @@ form.addEventListener('submit', function (event) {
         if (!fields[i].value) //boolean if some fields are empty 
         {   //if field is empty its considered to be an error so flag is set to true
             errorIndicator = true;
-            console.log('field is blank', fields[i])
+            //console.log('field is blank', fields[i])
             let error = document.createElement('div')//generate div element to place warning message 
             error.className='error' //assign class to the div element 
             error.style.color = 'red' //css needs to relocate
             error.innerHTML = 'Cannot be blank' // input text inside
             form[i].parentElement.insertBefore(error, fields[i]) // attach message to the current field
         }
-      }
-      //Array full of bad words
+    }
+      //Check Messages for invalid words, so create an Array full of bad words
       const badWords = ["feldercarb", "frack", "skinjob", "vulgacarb", "bad"];
       //for of loop to cycle througt 5 words
-      for (word of badWords) // word with have new bad word each iteration
-      { //check if bad word is present inside user's message 
+    for (word of badWords) // word with have new bad word each iteration
+    { //check if bad word is present inside user's message 
         if (message.value.includes(word)) // message.value.match(felbercarb/frack) didn't work for some reason
         {   // if invalid word is indicated then print another warning message above textarea
             errorIndicator = true;
@@ -99,9 +90,23 @@ form.addEventListener('submit', function (event) {
             message.parentElement.insertBefore(error, message)
         }
     }
+    //utilise the same logic to look for dot inside email
+    var symbol = ["."];
+    for (dot of symbol) // will loop only once
+    { //check if dot is present inside user's email 
+        if (!email.value.includes(dot)) 
+        {   // if dot word is not (!) present then print another warning message above email input
+            errorIndicator = true;
+            let error = document.createElement('div')
+            error.className = 'error'
+            error.style.color = 'red' 
+            error.innerHTML = 'Email should contain dot'
+            email.parentElement.insertBefore(error, email)
+        }
+    }
    // if no errors found then redirect submitted form to mailto client
     if (!errorIndicator)
-    {
+    {   //hard code your email for auto fill when mailto is called
         const mail = "eremeevoleg@gmail.com"
         window.location.href = `mailto:${mail}?subject=${subject.value}&Body=${message.value}`;
     }

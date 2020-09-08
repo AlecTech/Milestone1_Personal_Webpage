@@ -23,26 +23,31 @@ body {
   "foot social"
   ;
 }
-/* set up form section inside new grid for contact page */
-h1.contact{
-  grid-area: errorMessage;
-  display: flex;
-  justify-content: center;
-  /* transition: all 0.5s ease; */
+/* last moment addition - objectives section. Utilized old errorMessage section */
+#errorMessage{
+   grid-area: errorMessage;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 2rem;
 }
-
+section h2{
+  padding: 0;
+  margin: 2rem;
+}
+/* set up form section inside new grid for contact page */
 .validForm{
   grid-area: validForm;
 }
 /* copied form main.css */
 .social { 
   grid-area: social;
-  font-size: 1.5rem;
+  font-size: 1.5 rem;
 }
 /* font awesome icons borders */
 .social a{
-  padding: 5%;
-  margin: 5%;
+  padding: 2%;
+  margin: 2%;
   border: 2px solid blue;
 }
 .foot{ 
@@ -57,53 +62,13 @@ h1.contact{
   display: block;
   background: #fff;
   padding: 5px;
-  margin-top: 5%;
+  margin: 3%;
   width: 70%;
   border-radius: 5px;
 }
 footer a:hover{
   background: #5ef065;
 }
-
-/* common attributes for 3 sections */
-nav, footer, .social{
-  background-color: rgba(245, 124, 26, 0.7);
-  border-radius: 5%;
-}
-section {
-  background-color: rgba(255, 255, 255, 0.25);
-  border-radius: 5%;
-}
-.navi a:hover {
-  color: #ddddee; 
-} 
-#avatar { 
-  grid-area: avatar; 
-}
-/* Profile picture */
-img#avatar {
-  vertical-align: middle;
-  width: 100px;
-  height: 130px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  margin: 1rem 1rem 1rem 0;
-}
-/* common attributes for this sections */
-.navi, .yt, .git, .ard, .skill, .foot{
-  display: flex;
-  align-items: center;
-  padding: 0.8rem;
-}
-/* alignment/spacing of items inside navigation */
-.navi { 
-  grid-area: nav; 
-  justify-content: space-evenly;
-}
-.navi a{
-  margin: 5%;
-}
-
 /* Contact form */
 .validForm {
     width:90%;
@@ -124,7 +89,6 @@ input[type=text], textarea {
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
-  
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
     background-color: #4CAF50;
@@ -134,7 +98,6 @@ input[type=text], textarea {
     border-radius: 4px;
     cursor: pointer;
   }
-  
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
     background-color: #45a049;
